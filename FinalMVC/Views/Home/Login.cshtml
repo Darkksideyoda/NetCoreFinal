@@ -1,0 +1,37 @@
+﻿
+@model FinalMVC.Models.authenticateUser
+@addTagHelper*,Microsoft.AspNetCore.Mvc.Taghelpers
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Login.css">
+    <title>Document</title>
+</head>
+<body>
+    <form asp-action="Login" asp-controller="Home" class='login-form' method="post">
+        <div class="flex-row">
+            <label class="lf--label" for="username">
+                <img src="~/Images/user.svg" alt="user1" width="20px">
+            </label>
+            <input asp-for="username" name="username" id="username" class='lf--input' placeholder='Kullanıcı Adı' type='text'>
+        </div>
+        <div class="flex-row">
+            <label class="lf--label" for="password">
+                <img src="~/Images/key.svg" alt="key1" width="20px">
+            </label>
+            <input asp-for="password" id="password" class='lf--input' placeholder='Şifre' type='password' name="password">
+        </div>
+        <input onclick="myController()" class='lf--submit' type='submit' value='GİRİŞ'>
+    </form>
+    <a class='lf--forgot' href='#'>Misafir Kullanıcıysanız Lutfen Tıklayın</a>
+
+    @*<script src="~/js/logController.js"></script>*@
+</body>
+</html>

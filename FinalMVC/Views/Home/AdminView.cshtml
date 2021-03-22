@@ -1,0 +1,133 @@
+﻿
+
+@model FinalMVC.Models.authenticateUser
+@addTagHelper*,Microsoft.AspNetCore.Mvc.Taghelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/AdminView.css">
+
+
+    <title>Admin Page</title>
+</head>
+<body>
+    <div class="area"></div><nav class="main-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Ana Sayfa
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Komponent Listeleri
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Formlar
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Sayfalar
+                    </span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+                    <span class="nav-text">
+                        Grafik ve İstatistikler
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-font fa-2x"></i>
+                    <span class="nav-text">
+                        Notlar
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-table fa-2x"></i>
+                    <span class="nav-text">
+                        Üyeler
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-map-marker fa-2x"></i>
+                    <span class="nav-text">
+                        Konum Bilgileri
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-info fa-2x"></i>
+                    <span class="nav-text">
+                        Kullanıcı Bilgileri
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="logout">
+            <li>
+                <a href="#" asp-action="Login" asp-controller="Home" onclick="myfunction()">
+                    <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Çıkış Yap
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    @*
+        <ul>
+            <li>@Model.username</li>
+             <li>@Model.password</li>
+              <li>@Model.name</li>
+              <li>@Model.surname</li>
+               <li>@Model.mail</li>
+                <li>@Model.adres</li>
+                 <li>@Model.phone</li>
+                  <li>@Model.age</li>
+                   <li>@Model.job</li>
+
+
+        </ul> *@
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,143 @@
+﻿@model FinalMVC.Models.authenticateUser
+@{
+    Layout = null;
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/standartUser.css">
+
+
+    <title>User Page</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#0">Anasayfa</a></li>
+            <li><a href="#0">Mağza</a></li>
+            <li>
+                <a href="#0">Referanslarımız</a>
+                <ul>
+                    <li><a href="#0">INTEL</a></li>
+                    <li><a href="#0">MICROSOFT</a></li>
+                    <li><a href="#0">NVDIA</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#0">Ürünlerimiz</a>
+                <ul>
+                    <li><a href="#0">Bilgisayar OEM Satışı</a></li>
+                    <li><a href="#0">Yazılım Ürünleri Satışı</a></li>
+                    <li><a href="#0">Montaj ve Kurulum</a></li>
+                </ul>
+            </li>
+            <li><a onclick="tiklama()" id="profil1" href="#0">Profil</a></li>
+        </ul>
+    </nav>
+    <style>
+
+        h1{
+            text-align:center;
+            margin-top:500px;
+            color:crimson;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #t01{
+            visibility: hidden;
+            text-align: center;
+            margin-top: 300px;
+        }
+
+
+
+        table {
+            width: 100%;
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        #t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        #t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        #t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+
+
+    <table id="t01">
+        <tr>
+            <th>Kullanıcı Adı</th>
+            <th>Şifre</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Mail</th>
+            <th>Adres</th>
+            <th>Telefon</th>
+            <th>Yaş</th>
+            <th>Meslek</th>
+
+        </tr>
+        <tr>
+            <td>@Model.username</td>
+            <td>@Model.password</td>
+            <td>@Model.name</td>
+            <td>@Model.surname</td>
+            <td>@Model.mail</td>
+            <td>@Model.adres</td>
+            <td>@Model.phone</td>
+            <td>@Model.age</td>
+            <td>@Model.job</td>
+
+        </tr>
+       
+    </table>
+
+    <h1>PROFİL SEKMESİNDEN BİLGİLERNİZİ ÖĞRENEBİLİRSİNİZ !</h1>
+
+
+
+
+    <script>
+
+        function tiklama() {
+            if (document.getElementById("t01").style.visibility == "visible")
+                document.getElementById("t01").style.visibility = "hidden";
+            else
+                document.getElementById("t01").style.visibility = "visible"
+
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+</html>
